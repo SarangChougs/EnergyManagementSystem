@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0042)http://energy.mydevices.in/SelectSite.aspx -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Solar</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./Solar_files/w3.css">
+  <link rel="stylesheet" href="./Solar_files/css">
+  <link rel="stylesheet" href="./Solar_files/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
+
+
+
+  <link rel="stylesheet" href="./Solar_files/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .input-container {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+      border-bottom-style: inset;
+    }
+
+    .icon {
+      padding: 10px;
+      background: dodgerblue;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+
+    .input-field:focus {
+      border: 2px solid dodgerblue;
+    }
+
+    /* Set a style for the submit button */
+    .btn {
+      background-color: dodgerblue;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body class="w3-white">
+
+  <!-- Top container -->
+  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+        class="fa fa-bars"></i>&nbsp;&nbsp;Menu</button>
+    <span class="w3-bar-item w3-left">Energy Monitoring System</span>
+  </div>
+
+  <form name="form2" method="post" action="http://energy.mydevices.in/SelectSite.aspx" id="form2">
+    <div>
+      <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+        value="/wEPDwUKMTE0MDU0MjYzNg9kFgICAQ9kFgQCAQ8PFgIeBFRleHQFCk1pY3JvLU9ydGtkZAIDDxYCHwAFswM8bGkgY2xhc3M9InczLWJhciB3My1ob3Zlci1wYWxlLWdyZWVuIj48c3Bhbj48YSBocmVmPSJEZWZhdWx0LmFzcHg/TTE9ODY4OTI2MDM4OTU3MzY4Jk0yPTg2ODkyNjAzODk1NzM2OCI+PHNwYW4gY2xhc3M9InczLWJ0biB3My13aGl0ZSB3My1ib3JkZXIgdzMtYm9yZGVyLXJlZCB3My1yb3VuZC1sYXJnZSB3My1yaWdodCB3My1tYXJnaW4tdG9wIHczLW1pZGRsZSI+U2VsZWN0PC9zcGFuPjwvYT48L3NwYW4+PGkgY2xhc3M9ImZhIGZhLWJvbHQgdzMtYmFyLWl0ZW0gdzMtY2lyY2xlIHczLWhpZGUtc21hbGwiIHN0eWxlPSJmb250LXNpemU6NDhweDtjb2xvcjpyZWQiPjwvaT48ZGl2IGNsYXNzPSJ3My1iYXItaXRlbSI+PHNwYW4gY2xhc3M9InczLWxhcmdlIj48Yj5OYWdwdXI8L2I+PC9zcGFuPjxicj48c3Bhbj5FbmVyZ3kgTWV0ZXI8L3NwYW4+PC9kaXY+PC9saT5kZPKRcS/+Ay0cMNYScDMPpx+a4kFOASOHocnXtV0sljCX">
+    </div>
+
+    <div>
+      <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="78856B1B">
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-border" style="z-index:3;width:300px;height100%"
+      id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s3">
+          <img src="./Solar_files/avatar2.png" class="w3-circle w3-margin-right" style="width:36px">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <span>Welcome, <br><strong><span id="lblUserName">Micro-Ortk</span></strong></span><br>
+        </div>
+      </div>
+      <hr>
+      <div class="w3-container">
+        <h5>Menu</h5>
+      </div>
+      <div class="w3-bar-block">
+        <a href="http://energy.mydevices.in/SelectSite.aspx#"
+          class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()"
+          title="close menu"><i class="fa fa-remove fa-fw"></i>&nbsp;&nbsp;Close Menu</a>
+        <a href="http://energy.mydevices.in/Login.aspx" class="w3-bar-item w3-button w3-padding"><i
+            class="fa fa-window-close-o fa-fw"></i>&nbsp;&nbsp;Log-Out</a>
+      </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+      title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+      <!-- Header -->
+      <div class="w3-container" style="width:100%">
+        <h2>Solar Plant Locations...</h2>
+        <p>Select the solar plant which you like to monitor in detail:</p><br>
+        <ul class="w3-ul w3-card-4">
+          <p></p>
+          <li class="w3-bar w3-hover-pale-green"><span><a
+                href="http://energy.mydevices.in/Default.aspx?M1=868926038957368&amp;M2=868926038957368"><span
+                  class="w3-btn w3-white w3-border w3-border-red w3-round-large w3-right w3-margin-top w3-middle">Select</span></a></span><i
+              class="fa fa-bolt w3-bar-item w3-circle w3-hide-small" style="font-size:48px;color:red"></i>
+            <div class="w3-bar-item"><span class="w3-large"><b>Nagpur</b></span><br><span>Energy Meter</span></div>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <!-- Footer -->
+      <footer class="w3-container w3-grey w3-bottom">
+        <p>Powered by <a href="http://www.iomatic.in/" target="_blank">IomaTic</a></p>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+          overlayBg.style.display = "none";
+        } else {
+          mySidebar.style.display = 'block';
+          overlayBg.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+      }
+    </script>
+  </form>
+</body>
+</html>

@@ -13,12 +13,16 @@
     <title>Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <!-- custom gauge css -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/gauge.css'%}"> -->
 
 </head>
 
@@ -40,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -64,7 +68,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-target="#collapseUtilities" aria-expanded="true"
+                <a class="nav-link collapsed" href="dashboard" data-target="#collapseUtilities" aria-expanded="true"
                     aria-controls="collapseUtilities">
                     <i class="fa fa-certificate"></i>
                     <span>Live Solar Status</span>
@@ -73,7 +77,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="energystatus" data-target="#collapsePages" aria-expanded="true"
+                <a class="nav-link collapsed" href="#" data-target="#collapsePages" aria-expanded="true"
                     aria-controls="collapsePages">
                     <i class="fa fa-bolt"></i>
                     <span>Live Energy Status</span>
@@ -324,85 +328,97 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Generation Card Example -->
+                        <!-- Gauge meter Example 1 -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                <h4>Generation</h4>
+                                                <h4>Voltage</h4>
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">10499922 Kw</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <div class="col-auto">
+                                                <canvas id="gauge-canvas-1"></canvas>
+                                            </div>
+                                            <div class="card py-2 col-xl-12 shadow h-100">
+                                                <div class="h6 mb-0 font-weight-bold text-primary">VLL-VLN : 428.6 - 224.5</div>
+                                                <div class="h7 mb-0  text-grey">Phase 1 : 426.1</div>
+                                                <div class="h7 mb-0  text-grey">Phase 2 : 345.6</div>
+                                                <div class="h7 mb-0  text-grey">Phase 3 : 200.6</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Import Card Example -->
+                        <!-- Gauge meter Example 2 -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                <h4>Import</h4>
+                                                <h4>Current</h4>
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">... Kw</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
+                                            <div class="col-auto">
+                                                <canvas id="gauge-canvas-2"></canvas>
+                                            </div>
+                                            <div class="card py-2 col-xl-12 shadow h-100">
+                                                <div class="h6 mb-0 font-weight-bold text-primary">Current : 224.5</div>
+                                                <div class="h7 mb-0  text-grey">Phase 1 : 426.1</div>
+                                                <div class="h7 mb-0  text-grey">Phase 2 : 345.6</div>
+                                                <div class="h7 mb-0  text-grey">Phase 3 : 200.6</div>
+                                            </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Export Card Example -->
+                        <!-- Gauge meter Example 2 -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                <h4>Export</h4>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                <h4>Watt/hr</h4>
                                             </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">... Kw
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                </div>
+                                            <div class="col-auto">
+                                                <canvas id="gauge-canvas-3"></canvas>
                                             </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
+                                            <div class="card py-2 col-xl-12 shadow h-00">
+                                                <div class="h6 mb-0 font-weight-bold text-primary">Watt/ total : 230</div>
+                                                <div class="h7 mb-0  text-grey">Phase 1 : 426.1</div>
+                                                <div class="h7 mb-0  text-grey">Phase 2 : 345.6</div>
+                                                <div class="h7 mb-0  text-grey">Phase 3 : 200.6</div>
+                                            </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Net Card Example -->
+                        <!-- Gauge meter Example 4 -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                <h4>Net</h4>
+                                                <h4>Power Factor</h4>
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">... Kw</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
+                                            <div class="col-auto">
+                                                <canvas id="gauge-canvas-4"></canvas>
+                                            </div>
+                                            <div class="card py-2 col-xl-12 shadow h-100">
+                                                <div class="h6 mb-0 font-weight-bold text-primary">PF : 224.5
+                                                </div>
+                                                <div class="h7 mb-0  text-grey">Frequency : 426.1</div>
+                                                <div class="h7 mb-0  text-grey">Wh: 23232</div>
+                                            </div>
+                                            </div>
                                 </div>
                             </div>
                         </div>
@@ -418,7 +434,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Current value 1 trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Generation Trend</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -443,13 +459,13 @@
                             </div>
                         </div>
 
-                        <!-- Current value 2 Trend Chart -->
+                        <!-- Latest net meter Trend Chart -->
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Current value 2 Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Net Meter Trend</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -587,6 +603,11 @@
         <!-- Core plugin JavaScript-->
         <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
+        <!-- Canvas gauge plugin -->
+        <script type="text/javascript" src="{% static 'vendor/canvas-gauges/gauge.min.js'%}"></script>
+
+        <!-- custom script for gauge meters -->
+        <script type="text/javascript" src="{% static 'js/demo/gauge-custom.js' %}"></script>
         <!-- Custom scripts for all pages-->
         <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 
@@ -594,8 +615,9 @@
         <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
 
         <!-- Page level custom scripts -->
-        <script src="{%static 'js/demo/chart-area-demo.js' %}"></script>
+        <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
         <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
+
 
 </body>
 
