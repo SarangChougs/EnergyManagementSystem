@@ -75,8 +75,14 @@ WSGI_APPLICATION = 'ems.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'EMSGITDB',
+        'HOST': 'LAPTOP-4HFNS7EO\SQLEXPRESS',
+        'USER': 'sarang',
+        'PASSWORD': '1234',
+        'OPTIONS': {
+            'host_is_server': True,
+        }
     }
 }
 
