@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import CompleteTable
 
 # Create your views here.
 
@@ -7,4 +8,8 @@ def dashboard_home(request):
     return(render(request,'dashboard.html'))
 
 def dashboard_energy_status(request):
-    return(render(request,'energystatus.html'))
+    latestdata = CompleteTable.objects.get(id = 100)
+    context = {
+        'data': latestdata
+    }
+    return(render(request,'energystatus.html',context))

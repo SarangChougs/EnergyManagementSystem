@@ -341,10 +341,10 @@
                                                 <canvas id="gauge-canvas-1"></canvas>
                                             </div>
                                             <div class="card py-2 col-xl-12 shadow h-100">
-                                                <div class="h6 mb-0 font-weight-bold text-primary">VLL-VLN : 428.6 - 224.5</div>
-                                                <div class="h7 mb-0  text-grey">Phase 1 : 426.1</div>
-                                                <div class="h7 mb-0  text-grey">Phase 2 : 345.6</div>
-                                                <div class="h7 mb-0  text-grey">Phase 3 : 200.6</div>
+                                                <div class="h6 mb-0 font-weight-bold text-primary">VLL-VLN : {{ data.VLN}} - {{data.VLL}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 1 : {{data.V1}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 2 : {{data.V2}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 3 : {{data.V3}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -365,10 +365,10 @@
                                                 <canvas id="gauge-canvas-2"></canvas>
                                             </div>
                                             <div class="card py-2 col-xl-12 shadow h-100">
-                                                <div class="h6 mb-0 font-weight-bold text-primary">Current : 224.5</div>
-                                                <div class="h7 mb-0  text-grey">Phase 1 : 426.1</div>
-                                                <div class="h7 mb-0  text-grey">Phase 2 : 345.6</div>
-                                                <div class="h7 mb-0  text-grey">Phase 3 : 200.6</div>
+                                                <div class="h6 mb-0 font-weight-bold text-primary">Current : {{data.Amps}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 1 : {{data.A1}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 2 : {{data.A2}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 3 : {{data.A3}}</div>
                                             </div>
                                             </div>
                                     </div>
@@ -389,10 +389,10 @@
                                                 <canvas id="gauge-canvas-3"></canvas>
                                             </div>
                                             <div class="card py-2 col-xl-12 shadow h-00">
-                                                <div class="h6 mb-0 font-weight-bold text-primary">Watt/ total : 230</div>
-                                                <div class="h7 mb-0  text-grey">Phase 1 : 426.1</div>
-                                                <div class="h7 mb-0  text-grey">Phase 2 : 345.6</div>
-                                                <div class="h7 mb-0  text-grey">Phase 3 : 200.6</div>
+                                                <div class="h6 mb-0 font-weight-bold text-primary">Watt/hr total : {{data.Wavg}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 1 : {{data.W1}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 2 : {{data.W2}}</div>
+                                                <div class="h7 mb-0  text-grey">Phase 3 : {{data.W3}}</div>
                                             </div>
                                             </div>
                                     </div>
@@ -413,10 +413,10 @@
                                                 <canvas id="gauge-canvas-4"></canvas>
                                             </div>
                                             <div class="card py-2 col-xl-12 shadow h-100">
-                                                <div class="h6 mb-0 font-weight-bold text-primary">PF : 224.5
+                                                <div class="h6 mb-0 font-weight-bold text-primary">PF : {{data.PF}}
                                                 </div>
-                                                <div class="h7 mb-0  text-grey">Frequency : 426.1</div>
-                                                <div class="h7 mb-0  text-grey">Wh: 23232</div>
+                                                <div class="h7 mb-0  text-grey">Frequency : {{data.Freq}}</div>
+                                                <div class="h7 mb-0  text-grey">Wh: {{data.Wh}}</div>
                                             </div>
                                             </div>
                                 </div>
@@ -428,13 +428,13 @@
 
                     <div class="row">
 
-                        <!-- Latest Generation Trend Chart-->
+                        <!-- Latest Current Trend Chart-->
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Generation Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Current Trend</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -453,19 +453,19 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myLatestGenerationTrendChart"></canvas>
+                                        <canvas id="myLatestCurrentTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Latest net meter Trend Chart -->
+                        <!-- Latest Voltage Trend Chart -->
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Net Meter Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Voltage Trend</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -484,20 +484,20 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myLatestNetMeterTrendChart"></canvas>
+                                        <canvas id="latestVoltageTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <!-- Latest Export Trend Chart -->
+                        <!-- Latest Watt Trend Chart -->
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Export Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Watt/hr Trend</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -516,18 +516,18 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myLatestExportTrendChart"></canvas>
+                                        <canvas id="latestWattTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Latest Import Trend Chart -->
+                        <!-- Latest Power Factor Trend Chart -->
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Import Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Power Factor Trend</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -544,7 +544,7 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myLatestImportTrendChart"></canvas>
+                                        <canvas id="latestPFTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
