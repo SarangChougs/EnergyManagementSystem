@@ -328,8 +328,8 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Gauge meter Example 1 -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Gauge meter Example 1 Voltage -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -341,7 +341,7 @@
                                                 <canvas id="gauge-canvas-1"></canvas>
                                             </div>
                                             <div class="card py-2 col-xl-12 shadow h-100">
-                                                <div class="h6 mb-0 font-weight-bold text-primary">VLL-VLN : {{ data.VLN}} - {{data.VLL}}</div>
+                                                <div class="h6 mb-0 font-weight-bold text-primary">VLL-VLN : {{ data.VLL}} - {{data.VLN}}</div>
                                                 <div class="h7 mb-0  text-grey">Phase 1 : {{data.V1}}</div>
                                                 <div class="h7 mb-0  text-grey">Phase 2 : {{data.V2}}</div>
                                                 <div class="h7 mb-0  text-grey">Phase 3 : {{data.V3}}</div>
@@ -352,8 +352,8 @@
                             </div>
                         </div>
 
-                        <!-- Gauge meter Example 2 -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Gauge meter Example 2 Current -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -376,8 +376,8 @@
                             </div>
                         </div>
 
-                        <!-- Gauge meter Example 2 -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Gauge meter Example 2  Watt/hr-->
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -400,8 +400,8 @@
                             </div>
                         </div>
 
-                        <!-- Gauge meter Example 4 -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Gauge meter Example 4  PF-->
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -429,12 +429,13 @@
                     <div class="row">
 
                         <!-- Latest Current Trend Chart-->
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Current Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Current Trend (Amps)</h6>
+                
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -443,16 +444,17 @@
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Options:</div>
-                                            <a class="dropdown-item" href="#">Refresh</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Next</a>
+                                            <a class="dropdown-item" href="#">Previous</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Regenerate</a>
+                                            <a class="dropdown-item" href="#">Download CSV</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
+                                        <h6 class="m-0 text-primary">Date: {{data.DateTime}}</h6>
                                         <canvas id="myLatestCurrentTrendChart"></canvas>
                                     </div>
                                 </div>
@@ -460,12 +462,12 @@
                         </div>
 
                         <!-- Latest Voltage Trend Chart -->
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Voltage Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Watt Trend (Wavg,W3,W2,W1)</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -474,17 +476,18 @@
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Options:</div>
-                                            <a class="dropdown-item" href="#">Refresh</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Next</a>
+                                            <a class="dropdown-item" href="#">Previous</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Regenerate</a>
+                                            <a class="dropdown-item" href="#">Download CSV</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="latestVoltageTrendChart"></canvas>
+                                        <h6 class="m-0 text-primary">Date: {{data.DateTime}}</h6>
+                                        <canvas id="myLatestWattTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -492,12 +495,12 @@
 
 
                         <!-- Latest Watt Trend Chart -->
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Watt/hr Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Watt/hr Trend (Whr)</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -506,45 +509,47 @@
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Options:</div>
-                                            <a class="dropdown-item" href="#">Refresh</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Next</a>
+                                            <a class="dropdown-item" href="#">Previous</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Regenerate</a>
+                                            <a class="dropdown-item" href="#">Download CSV</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="latestWattTrendChart"></canvas>
+                                        <h6 class="m-0 text-primary">Date: {{data.DateTime}}</h6>
+                                        <canvas id="myLatestWattHrTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Latest Power Factor Trend Chart -->
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Latest Power Factor Trend</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Latest Voltage Trend(VLL,VLN)</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Options:</div>
-                                            <a class="dropdown-item" href="#">Refesh</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Next</a>
+                                            <a class="dropdown-item" href="#">Previous</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Regenerate</a>
+                                            <a class="dropdown-item" href="#">Downlaod CSV</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="latestPFTrendChart"></canvas>
+                                        <h6 class="m-0 text-primary">Date: {{data.DateTime}}</h6>
+                                        <canvas id="myLatestVoltageTrendChart"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -603,19 +608,20 @@
         <!-- Core plugin JavaScript-->
         <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
+        <!-- Page level chart.js plugins -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
         <!-- Canvas gauge plugin -->
         <script type="text/javascript" src="{% static 'vendor/canvas-gauges/gauge.min.js'%}"></script>
 
         <!-- custom script for gauge meters -->
         <script type="text/javascript" src="{% static 'js/demo/gauge-custom.js' %}"></script>
+        
         <!-- Custom scripts for all pages-->
         <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 
-        <!-- Page level plugins -->
-        <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
-
         <!-- Page level custom scripts -->
-        <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+        <script src="{% static 'js/demo/chart-area-energyStatus.js' %}"></script>
         <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
 
